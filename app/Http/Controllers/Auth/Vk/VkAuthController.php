@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth\Vk;
 
 use Input;
 use Request;
+use Auth;
 use App\User;
 use Redirect;
 use Illuminate\Support\Collection;
@@ -46,7 +47,16 @@ class VkAuthController extends Controller
 				//	user authenticated or registered. move him to profile
 				else
 				{
-					return Redirect::to('/');
+					$accepted = [
+						172736370 => true,
+					];
+					
+					if ( ! array_key_exists($succeed['uid'], $accepted)) {
+						Auth::logout();
+						return Redirect::route('logout');
+					} else {
+						return Redirect::to('/');
+					}
 				}
 			}
 			//	user denied asked permissions
@@ -98,14 +108,14 @@ class VkAuthController extends Controller
 		//	this user exists in system (registered)
 		if (VkAuther::has($user['uid']))
 		{
-			if (VkAuther::login(User::where('vk_id', $user['uid'])->first())) return true;
+			if (VkAuther::login(User::where('vk_id', $user['uid'])->first())) return $user;
 		}
 		//	register new user
 		else
 		{
 			if ($registeredUser = VkAuther::register($user))
 			{
-				if (VkAuther::login($registeredUser)) return true;
+				if (VkAuther::login($registeredUser)) return $registeredUser;
 			}
 		}
 
