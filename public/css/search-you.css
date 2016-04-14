@@ -1,0 +1,90 @@
+#map-canvas {
+	max-height:400px;
+	min-height:200px;
+	height:300px;
+	width:100%;
+	margin:0 auto;
+	background:#eee;
+	background-image:url(/img/animate.gif);
+	background-repeat:no-repeat;
+	background-position:center;
+	font-size:1.2em;
+	color:#777;
+	text-align:center;
+}
+
+#map-canvas:after {
+	content:"Google map is being loaded...";
+}
+
+#footer {
+    padding-bottom:4px !important;
+    padding-top:4px !important;
+}
+
+.slider-track {
+	width: 100%;
+}
+.slider-search-age-from {
+	font-weight:bold;
+}
+.slider-search-age-to {
+	font-weight:bold;
+}
+.slider-search-growth-from {
+	font-weight:bold;
+}
+.slider-search-growth-to {
+	font-weight:bold;
+}
+
+
+
+
+.search-item {
+	padding:12px 10px;
+	margin:4px 0;
+	background:#F5F5F5;
+	border-radius:6px;
+}
+.search-item:hover {
+	cursor:pointer;
+}
+
+.search-item-title {
+	font-size:1.1em;
+	font-family:Calibri;
+	font-weight:bold;
+}
+
+.search-item-matches-not {
+	color:#F08080;
+}
+.search-item-matches {
+	color:#3CB371;
+}
+
+
+select {
+	padding:6px;
+}
+
+.search-select-region {
+	height:auto;
+	max-height: 280px !important;
+	padding-top:8px;
+	padding-bottom:8px;
+	overflow-y:auto;
+}
+
+.search-region-title {
+	font-size:0.9em;
+	font-weight:bold;
+}
+
+.search-select-region option {
+	-webkit-appearance: none;
+	display:inline-block;
+	padding:10px;
+	margin:10px;
+}
