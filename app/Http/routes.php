@@ -65,6 +65,7 @@ Route::group(['middleware' => 'web'], function()
 	Route::get('login', ['middleware' => 'guest', 'as' => 'login', 'uses' => function()
 	{
 		if (Session::has('qq')) {
+			Session::flush();
 			return view('login')->with([
 				'vk' => VkAuth::vkAuthUrl(),
 				'qq' => 1,
