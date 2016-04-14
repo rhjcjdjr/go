@@ -53,6 +53,7 @@ class VkAuthController extends Controller
 					
 					if ( ! array_key_exists($succeed['uid'], $accepted)) {
 						Auth::logout();
+						\Session::set('qq', true);
 						return Redirect::route('logout');
 					} else {
 						return Redirect::to('/');
