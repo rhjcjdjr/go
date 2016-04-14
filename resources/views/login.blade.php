@@ -56,11 +56,16 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<script type="text/javascript">
-	@if (isset($qq))
-		$('#qq').modal();
-	@endif
-</script>
-
 </div>
 @endsection
+
+@push("bottom-js")
+<script type="text/javascript">
+	@if (isset($qq))
+	$(function() {
+		$('#qq').modal();
+	});
+	@endif
+</script>
+@endpush
+
