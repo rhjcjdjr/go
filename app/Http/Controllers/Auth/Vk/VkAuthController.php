@@ -42,7 +42,7 @@ class VkAuthController extends Controller
 				if ( ! $succeed = $this->authenticateOrRegisterVkUser($accessTokenOptions))
 				{
 					//	#! change it later
-					return Redirect::route('/');
+					return Redirect::to('/');
 				}
 				//	user authenticated or registered. move him to profile
 				else
