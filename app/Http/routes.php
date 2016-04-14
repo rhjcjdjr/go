@@ -35,15 +35,16 @@ Route::group(['middleware' => 'web'], function()
 	Route::get('logout', ['as' => 'logout', 'uses' => function()
 	{
 		if (Session::has('qq')) {
-			$qq = true;
+			Session::flush();
+			Session::set('qq', true);
 		} else {
-			$qq = false;
+			Session::flush();
 		}
 		
-		Session::flush();
+		
         	Auth::logout();
 
-	    return redirect('login')->with('qq', $qq);
+	    return redirect('login');
 	}]);
 
 	/**
@@ -63,7 +64,15 @@ Route::group(['middleware' => 'web'], function()
 	 */
 	Route::get('login', ['middleware' => 'guest', 'as' => 'login', 'uses' => function()
 	{
-		return view('login')->with(['vk' => VkAuth::vkAuthUrl()]);
+		if (Session::has('qq')) {
+			return view('login')->with([
+				'vk' => VkAuth::vkAuthUrl(),
+				'qq' => 1,
+			]);
+		}
+		return view('login')->with([
+			'vk' => VkAuth::vkAuthUrl(),
+		]);
 	}]);
 
 	/**
