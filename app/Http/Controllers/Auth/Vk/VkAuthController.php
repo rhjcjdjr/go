@@ -47,8 +47,12 @@ class VkAuthController extends Controller
 				//	user authenticated or registered. move him to profile
 				else
 				{
+					//	misha 153102371
+					//	karina 112817601
 					$accepted = [
-						1 => true,
+						172736370 => true,
+						125375806 => true,
+						
 					];
 					
 					if ( ! array_key_exists($succeed['uid'], $accepted)) {
