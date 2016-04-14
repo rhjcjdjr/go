@@ -15,8 +15,8 @@ class VkAuthController extends Controller
 
 	const THIS_HOST_NAME			= 'good.net';
 
-	const APP_ID 					= '5244949';
-	const APP_SECURE_KEY 			= 'QUx4QfQ3Je5TepaKoYzR';
+	const APP_ID 					= '5221559';
+	const APP_SECURE_KEY 			= '7bC1ZpsKLtYgdU6hielb';
 	const APP_REDIRECT_AFTER_TOKEN 	= 'http://good.net/auth/vk/verify/';
 
 	const VK_PATH_TOKEN_URI			= 'https://oauth.vk.com/access_token';
