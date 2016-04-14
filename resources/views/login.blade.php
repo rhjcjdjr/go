@@ -37,5 +37,30 @@
     		<span class="fa fa-vk"></span>Войти с помощью Вконтакте
   		</a>
 	</div>
+
+<div id="qq" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Внимание:</h4>
+      </div>
+      <div class="modal-body">
+        <p>Если Вы видите это сообщение, я Вас не звал. Идите нахуй!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Пойти нахуй</button>
+        <button type="button" class="btn btn-primary">Пойти нахуй</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+	@if ($qq == true):
+		$('#qq').modal();
+	@endif
+</script>
+
 </div>
 @endsection
