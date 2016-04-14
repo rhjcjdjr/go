@@ -46,11 +46,11 @@
         <h4 class="modal-title">Внимание:</h4>
       </div>
       <div class="modal-body">
-        <p>Если Вы видите это сообщение, я Вас не звал. Идите нахуй!</p>
+        <p>Сори. Доступа нет!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Пойти нахуй</button>
-        <button type="button" class="btn btn-primary">Пойти нахуй</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Пам пам</button>
+        <button type="button" class="btn btn-primary">Тык</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
