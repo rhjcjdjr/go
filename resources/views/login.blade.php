@@ -57,7 +57,7 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript">
-	@if ($qq == true):
+	@if (isset($qq) && $qq == true):
 		$('#qq').modal();
 	@endif
 </script>
