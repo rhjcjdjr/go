@@ -34,11 +34,16 @@ Route::group(['middleware' => 'web'], function()
 	 */
 	Route::get('logout', ['as' => 'logout', 'uses' => function()
 	{
+		if (Session::has('qq')) {
+			$qq = true;
+		} else {
+			$qq = false;
+		}
+		
 		Session::flush();
+        	Auth::logout();
 
-        Auth::logout();
-
-	    return redirect('login');
+	    return redirect('login')->with('qq', $qq);
 	}]);
 
 	/**
