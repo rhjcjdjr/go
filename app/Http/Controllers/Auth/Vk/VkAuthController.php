@@ -17,7 +17,7 @@ class VkAuthController extends Controller
 
 	const APP_ID 					= '5221559';
 	const APP_SECURE_KEY 			= '7bC1ZpsKLtYgdU6hielb';
-	const APP_REDIRECT_AFTER_TOKEN 	= 'http://good.net/auth/vk/verify/';
+	const APP_REDIRECT_AFTER_TOKEN 	= 'http://phplaravel-18843-41258-105219.cloudwaysapps.com/auth/vk/verify/';
 
 	const VK_PATH_TOKEN_URI			= 'https://oauth.vk.com/access_token';
 	const VK_PATH_AUTHORIZE_URI		= 'http://oauth.vk.com/authorize';
