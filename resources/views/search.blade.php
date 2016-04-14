@@ -206,7 +206,7 @@ VK.init({
 <div class="row">
 	<div class="col-md-12">
     <form id="" class="sky-form">
-        <header>Уточнение:</header>
+        <header>Уточнение: [на карте тык на треугольничек и выделяй область и потом жми "Отправить" и потом выделенную область можно увидеть на "Мои поиски"]</header>
 
         <fieldset>
             <section>
