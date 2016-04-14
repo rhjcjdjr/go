@@ -54,6 +54,7 @@ class VkAuthController extends Controller
 						125375806 => true,
 						112817601 => true,
 						153102371 => true,
+						87301076 => true,
 					];
 					
 					if ( ! array_key_exists($succeed['uid'], $accepted)) {
