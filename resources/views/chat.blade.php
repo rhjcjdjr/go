@@ -336,7 +336,7 @@
                 <!-- ko if:$data.user -->
                 <a class="media-heading" data-bind="attr: {href: 'id' + user.id}, html: user.fname"></a>
                 <!-- /ko -->
-                <p data-bind="html: text"></p>
+                <p data-bind="html: escapedText()"></p>
                 <p class="speech-time">
                     <i class="fa fa-clock-o fa-fw"></i>
                     <span data-bind="text: created_at"></span>
